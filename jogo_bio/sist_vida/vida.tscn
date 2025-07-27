@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6gycat6faofp"]
+
+[ext_resource type="Script" uid="uid://7i3jqydn4k2s" path="res://sist_vida/vida.gd" id="1_ky0ck"]
+[ext_resource type="Texture2D" uid="uid://ddxqckqtbpnau" path="res://sist_vida/c_3.png" id="1_u3gm2"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(139, 112)
+texture = ExtResource("1_u3gm2")
+script = ExtResource("1_ky0ck")

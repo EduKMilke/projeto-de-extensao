@@ -13,9 +13,9 @@ offset_bottom = 40.0
 script = ExtResource("1_yvrxv")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TextureRect/Area2D"]
-polygon = PackedVector2Array(179, 296, 176, 422, 201, 607, 302, 585, 421, 597, 427, 531, 421, 434, 418, 309, 299, 133)
+polygon = PackedVector2Array(179, 296, 176, 422, 201, 607, 302, 585, 421, 597, 427, 531, 421, 434, 418, 309, 302, 293)
 
 [node name="Sprite2D" type="Sprite2D" parent="TextureRect/Area2D"]
-position = Vector2(300, 442)
+position = Vector2(291, 445)
 scale = Vector2(2.00781, 2.49219)
 texture = ExtResource("2_yvrxv")

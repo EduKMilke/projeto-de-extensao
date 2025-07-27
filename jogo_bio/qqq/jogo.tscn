@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfhkyxflm1v2x"]
+[gd_scene load_steps=6 format=3 uid="uid://dfhkyxflm1v2x"]
 
+[ext_resource type="PackedScene" uid="uid://b6gycat6faofp" path="res://sist_vida/vida.tscn" id="1_p4bq0"]
 [ext_resource type="Script" uid="uid://dskm7ccr8qapi" path="res://qqq/character_body_2d.gd" id="1_w8kdh"]
 [ext_resource type="Texture2D" uid="uid://cdt6bx71uyq7l" path="res://icon.svg" id="2_wld2h"]
 [ext_resource type="Script" uid="uid://5i8ke6dqgofe" path="res://qqq/character_body_2d_2.gd" id="3_wld2h"]
+[ext_resource type="Script" uid="uid://ifqcl4bx71kw" path="res://qqq/bota.gd" id="5_bdjm7"]
 
 [node name="Jogo" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_p4bq0")]
+position = Vector2(92, 79)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(573, 413)
@@ -22,45 +27,11 @@ modulate = Color(0.443852, 0.726391, 0, 1)
 position = Vector2(3, 0)
 texture = ExtResource("2_wld2h")
 
-[node name="ItemList" type="ItemList" parent="."]
-offset_left = -6.0
-offset_top = 645.0
-offset_right = 712.0
-offset_bottom = 1278.0
+[node name="Button" type="Button" parent="."]
+offset_left = 94.0
+offset_top = 510.0
+offset_right = 600.0
+offset_bottom = 796.0
+script = ExtResource("5_bdjm7")
 
-[node name="Label" type="Label" parent="ItemList"]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 1.0
-offset_right = 719.0
-offset_bottom = 174.0
-theme_override_font_sizes/font_size = 70
-
-[node name="Button" type="Button" parent="ItemList"]
-layout_mode = 1
-anchors_preset = -1
-offset_left = 44.0
-offset_top = 394.0
-offset_right = 304.0
-offset_bottom = 506.0
-
-[node name="Button2" type="Button" parent="ItemList"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 215.0
-offset_right = 317.0
-offset_bottom = 319.0
-
-[node name="Button3" type="Button" parent="ItemList"]
-layout_mode = 0
-offset_left = 396.0
-offset_top = 234.0
-offset_right = 670.0
-offset_bottom = 319.0
-
-[node name="Button4" type="Button" parent="ItemList"]
-layout_mode = 0
-offset_left = 396.0
-offset_top = 404.0
-offset_right = 676.0
-offset_bottom = 513.0
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
