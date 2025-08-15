@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://driespceafclw"]
+
+[ext_resource type="Script" uid="uid://dm3cpa0p35yhi" path="res://scripts/sespinhos.gd" id="1_m45rj"]
+[ext_resource type="Texture2D" uid="uid://d27xtydusga3q" path="res://sprites/espinho.png" id="2_2rc1o"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_m45rj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(0, -9.2, 9.2, 9.2, -9.2, 9.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, 0)
+scale = Vector2(0.367188, 0.371094)
+texture = ExtResource("2_2rc1o")

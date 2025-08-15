@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://qfpt1hx1xdps"]
+
+[ext_resource type="Script" uid="uid://brady85p1svdy" path="res://scripts/schave.gd" id="1_dk8e2"]
+[ext_resource type="Texture2D" uid="uid://dum4g8ka33why" path="res://icon.svg" id="2_4ll4a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ll4a"]
+radius = 26.0192
+
+[node name="Chave" type="Area2D"]
+script = ExtResource("1_dk8e2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4ll4a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, 3)
+scale = Vector2(0.695313, 0.742188)
+texture = ExtResource("2_4ll4a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

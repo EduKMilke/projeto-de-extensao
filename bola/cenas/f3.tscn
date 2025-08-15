@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmw2jt3otjrxq"]
+
+[ext_resource type="PackedScene" uid="uid://cgsorsrvso36" path="res://cenas/base.tscn" id="1_4tdms"]
+[ext_resource type="PackedScene" uid="uid://cgc27nhlohaka" path="res://obj/cenário.tscn" id="1_br8u5"]
+[ext_resource type="PackedScene" uid="uid://c38pl0fdixhj" path="res://obj/bandera.tscn" id="2_iacpx"]
+[ext_resource type="PackedScene" uid="uid://driespceafclw" path="res://obj/espinhos.tscn" id="3_br8u5"]
+[ext_resource type="PackedScene" uid="uid://cqym3gtsriyw" path="res://obj/player.tscn" id="5_wg643"]
+
+[node name="F3" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_br8u5")]
+position = Vector2(999, 613)
+layer_0/tile_data = PackedInt32Array(65539, 0, 0, 65540, 65536, 0, 65541, 131072, 0, 65542, 196608, 0, 65543, 262144, 0, 65544, 327680, 0, 65545, 393216, 0, 65546, 458752, 0, 131067, 0, 0, 131068, 65536, 0, 131069, 131072, 0, 131070, 196608, 0, 131071, 262144, 0, 65536, 327680, 0, 65537, 393216, 0, 65538, 458752, 0, 131059, 0, 0, 131060, 65536, 0, 131061, 131072, 0, 131062, 196608, 0, 131063, 262144, 0, 131064, 327680, 0, 131065, 393216, 0, 131066, 458752, 0, 131051, 0, 0, 131052, 65536, 0, 131053, 131072, 0, 131054, 196608, 0, 131055, 262144, 0, 131056, 327680, 0, 131057, 393216, 0, 131058, 458752, 0, 131043, 0, 0, 131044, 65536, 0, 131045, 131072, 0, 131046, 196608, 0, 131047, 262144, 0, 131048, 327680, 0, 131049, 393216, 0, 131050, 458752, 0, 131035, 0, 0, 131036, 65536, 0, 131037, 131072, 0, 131038, 196608, 0, 131039, 262144, 0, 131040, 327680, 0, 131041, 393216, 0, 131042, 458752, 0, 131027, 0, 0, 131028, 65536, 0, 131029, 131072, 0, 131030, 196608, 0, 131031, 262144, 0, 131032, 327680, 0, 131033, 393216, 0, 131034, 458752, 0, 131019, 0, 0, 131020, 65536, 0, 131021, 131072, 0, 131022, 196608, 0, 131023, 262144, 0, 131024, 327680, 0, 131025, 393216, 0, 131026, 458752, 0, 131011, 0, 0, 131012, 65536, 0, 131013, 131072, 0, 131014, 196608, 0, 131015, 262144, 0, 131016, 327680, 0, 131017, 393216, 0, 131018, 458752, 0, 131003, 0, 0, 131004, 65536, 0, 131005, 131072, 0, 131006, 196608, 0, 131007, 262144, 0, 131008, 327680, 0, 131009, 393216, 0, 131010, 458752, 0)
+
+[node name="Node2D" parent="." instance=ExtResource("1_4tdms")]
+position = Vector2(-2, -19)
+
+[node name="Area2D" parent="." instance=ExtResource("2_iacpx")]
+position = Vector2(960, 584)
+
+[node name="Area2D2" parent="." instance=ExtResource("3_br8u5")]
+position = Vector2(483, 605)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("5_wg643")]
+position = Vector2(109, 589)
