@@ -1,21 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj7iosee71iu2"]
+[gd_scene load_steps=7 format=3 uid="uid://dj7iosee71iu2"]
 
-[ext_resource type="Script" uid="uid://chuiu7bh3wc81" path="res://scripts/play.gd" id="1_64url"]
+[ext_resource type="Script" path="res://scripts/play.gd" id="1_64url"]
+[ext_resource type="Texture2D" uid="uid://degwtmof6nfid" path="res://sprites/Inciar.png" id="2_hsu4v"]
+[ext_resource type="Texture2D" uid="uid://pp35sp16pg4n" path="res://sprites/Sair.png" id="2_nbnbt"]
+[ext_resource type="Script" path="res://scripts/button_2.gd" id="3_qvcyk"]
+[ext_resource type="Texture2D" uid="uid://dugeoyv82j8uc" path="res://sprites/Menu.png" id="4_mmoso"]
+[ext_resource type="Texture2D" uid="uid://djiube67jtv36" path="res://sprites/Diviball.png" id="6_nxpqr"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(367, 324)
+position = Vector2(383, 413)
 
 [node name="Button" type="Button" parent="."]
-offset_left = 78.0
-offset_top = -121.0
-offset_right = 272.0
-offset_bottom = -57.0
+offset_left = 82.0
+offset_top = -76.0
+offset_right = 276.0
+offset_bottom = -12.0
 script = ExtResource("1_64url")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button"]
+position = Vector2(95, 40)
+scale = Vector2(1.6625, 1.6781)
+texture = ExtResource("2_hsu4v")
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 80.0
-offset_top = 37.0
+offset_top = 69.0
 offset_right = 279.0
-offset_bottom = 101.0
+offset_bottom = 133.0
+script = ExtResource("3_qvcyk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button2"]
+position = Vector2(96, 30)
+scale = Vector2(1.5275, 1.25846)
+texture = ExtResource("2_nbnbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(197, -94.0001)
+scale = Vector2(3.12634, 3.18137)
+texture = ExtResource("4_mmoso")
+
+[node name="Sprite2Dtitulo" type="Sprite2D" parent="."]
+position = Vector2(185, -254)
+scale = Vector2(0.382975, 0.292114)
+texture = ExtResource("6_nxpqr")
 
 [connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

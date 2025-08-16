@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b36pws3uhcb6o" path="res://obj/parede.tscn" id="2_wix1v"]
 [ext_resource type="PackedScene" uid="uid://c38pl0fdixhj" path="res://obj/bandera.tscn" id="3_vtnip"]
 [ext_resource type="PackedScene" uid="uid://cqym3gtsriyw" path="res://obj/player.tscn" id="4_22ry2"]
-[ext_resource type="PackedScene" uid="uid://cgc27nhlohaka" path="res://obj/cenário.tscn" id="5_wix1v"]
+[ext_resource type="PackedScene" uid="uid://cgc27nhlohaka" path="res://obj/cen├írio.tscn" id="5_wix1v"]
 
 [node name="F0" type="Node2D"]
 
@@ -37,7 +37,7 @@ offset_top = 184.0
 offset_right = 468.0
 offset_bottom = 441.0
 scale = Vector2(3, 3)
-text = "pegue a bandeira"
+text = "Pegue a bandeira"
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("2_wix1v")]
 position = Vector2(481, -13)

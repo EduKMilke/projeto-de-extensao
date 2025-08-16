@@ -14,5 +14,5 @@ func on_body_entered(body: Node2D):
 		var timer = get_tree().create_timer(1.0)
 		timer.timeout.connect(reset_cena)
 func reset_cena():
-	# Reinicia a cena atual.
+
 	get_tree().reload_current_scene()

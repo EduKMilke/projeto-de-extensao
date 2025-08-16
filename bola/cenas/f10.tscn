@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd2v0sb380esi"]
+
+[ext_resource type="Texture2D" uid="uid://dsmrtjvgmqf41" path="res://sprites/Bola Suprema.png" id="1_tfx1i"]
+[ext_resource type="Script" path="res://scripts/b_final.gd" id="2_12xc3"]
+
+[node name="f10" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(571.5, 323.5)
+scale = Vector2(3.05645, 3.09314)
+texture = ExtResource("1_tfx1i")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 42.0
+offset_top = 442.0
+offset_right = 278.0
+offset_bottom = 506.0
+theme_override_font_sizes/font_size = 46
+text = "PARABÉNS"
+
+[node name="BigShot" type="Label" parent="."]
+offset_left = 838.0
+offset_top = 423.0
+offset_right = 1194.0
+offset_bottom = 646.0
+theme_override_font_sizes/font_size = 35
+text = "Agora você é  a 
+BOLA SUPREMA!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 149.0
+offset_top = 549.0
+offset_right = 262.0
+offset_bottom = 614.0
+script = ExtResource("2_12xc3")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 99.0
+offset_bottom = 54.0
+text = "voltar para 
+o menu"
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]

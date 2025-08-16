@@ -6,7 +6,9 @@ var jmp = 500
 @onready var raycast = $RayCast2D
 func _physics_process(delta: float) -> void:
 	var velocity = linear_velocity
-	
+	if Input.is_action_just_pressed("t_r"):
+		var cena = Global.sala[0]
+		get_tree().change_scene_to_file(cena)
 
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = spd
