@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dj7iosee71iu2"]
 
-[ext_resource type="Script" path="res://scripts/play.gd" id="1_64url"]
+[ext_resource type="Script" uid="uid://chuiu7bh3wc81" path="res://scripts/play.gd" id="1_64url"]
 [ext_resource type="Texture2D" uid="uid://degwtmof6nfid" path="res://sprites/Inciar.png" id="2_hsu4v"]
 [ext_resource type="Texture2D" uid="uid://pp35sp16pg4n" path="res://sprites/Sair.png" id="2_nbnbt"]
-[ext_resource type="Script" path="res://scripts/button_2.gd" id="3_qvcyk"]
+[ext_resource type="Script" uid="uid://dyftkxtnbb74o" path="res://cenas/button_2.gd" id="3_qvcyk"]
 [ext_resource type="Texture2D" uid="uid://dugeoyv82j8uc" path="res://sprites/Menu.png" id="4_mmoso"]
 [ext_resource type="Texture2D" uid="uid://djiube67jtv36" path="res://sprites/Diviball.png" id="6_nxpqr"]
 

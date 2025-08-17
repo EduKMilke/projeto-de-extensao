@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c38pl0fdixhj"]
 
-[ext_resource type="Script" path="res://scripts/sbandera.gd" id="1_phhtn"]
+[ext_resource type="Script" uid="uid://d2l5dgrj4ybgt" path="res://scripts/sbandera.gd" id="1_phhtn"]
 [ext_resource type="Texture2D" uid="uid://bili1v6jd34wl" path="res://sprites/bandera.png" id="2_3p2oq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6n4bu"]

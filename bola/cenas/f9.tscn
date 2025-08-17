@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cgsorsrvso36" path="res://cenas/base.tscn" id="1_lkmxc"]
 [ext_resource type="PackedScene" uid="uid://c38pl0fdixhj" path="res://obj/bandera.tscn" id="2_s6i7p"]
-[ext_resource type="PackedScene" uid="uid://cgc27nhlohaka" path="res://obj/cen├írio.tscn" id="3_m3hue"]
+[ext_resource type="PackedScene" uid="uid://cgc27nhlohaka" path="res://obj/cenário.tscn" id="3_m3hue"]
 [ext_resource type="PackedScene" uid="uid://cr2u7a3pjti4u" path="res://obj/chao.tscn" id="4_jwwva"]
 [ext_resource type="PackedScene" uid="uid://driespceafclw" path="res://obj/espinhos.tscn" id="5_qus4c"]
 [ext_resource type="PackedScene" uid="uid://cqym3gtsriyw" path="res://obj/player.tscn" id="6_wddvp"]
@@ -45,6 +45,3 @@ offset_bottom = 144.0
 theme_override_font_sizes/font_size = 21
 text = "Parabéns, você chegou no desafio final. 
 Boa sorte!"
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("4_jwwva")]
-position = Vector2(1091, 207)

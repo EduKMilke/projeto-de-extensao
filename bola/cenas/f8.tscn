@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://cgsorsrvso36" path="res://cenas/base.tscn" id="1_1y0e3"]
 [ext_resource type="PackedScene" uid="uid://c38pl0fdixhj" path="res://obj/bandera.tscn" id="2_jf6g1"]
 [ext_resource type="PackedScene" uid="uid://qfpt1hx1xdps" path="res://obj/cahve.tscn" id="3_jf6g1"]
-[ext_resource type="PackedScene" uid="uid://cgc27nhlohaka" path="res://obj/cen├írio.tscn" id="3_nq7pg"]
+[ext_resource type="PackedScene" uid="uid://cgc27nhlohaka" path="res://obj/cenário.tscn" id="3_nq7pg"]
 [ext_resource type="PackedScene" uid="uid://cr2u7a3pjti4u" path="res://obj/chao.tscn" id="4_6wyi4"]
 [ext_resource type="PackedScene" uid="uid://driespceafclw" path="res://obj/espinhos.tscn" id="5_v878j"]
 [ext_resource type="PackedScene" uid="uid://cqym3gtsriyw" path="res://obj/player.tscn" id="6_rrgmv"]
-[ext_resource type="Script" path="res://scripts/gerenciadordechaves.gd" id="7_nq7pg"]
+[ext_resource type="Script" uid="uid://xo75grc8clht" path="res://scripts/gerenciadordechaves.gd" id="7_nq7pg"]
 
 [node name="f8" type="Node2D"]
 
