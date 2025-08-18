@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm8tnwt3heo56"]
+
+[ext_resource type="Script" uid="uid://dv62ewd6gflk0" path="res://script/scarta.gd" id="1_ck7s5"]
+
+[node name="Button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_ck7s5")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CardText" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Front" type="TextureRect" parent="TextureButton"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Back" type="TextureRect" parent="TextureButton"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureButton"]
+root_node = NodePath("../..")
