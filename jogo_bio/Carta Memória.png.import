@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kmecovm3mf6i"
-path="res://.godot/imported/Sol.png-aa340f2b19f75edcbcf3847c673e7109.ctex"
+uid="uid://d2udo2nny7vgo"
+path="res://.godot/imported/Carta Memória.png-9f92ff39b8566d0c76ca92992c3d9ebb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sol.png"
-dest_files=["res://.godot/imported/Sol.png-aa340f2b19f75edcbcf3847c673e7109.ctex"]
+source_file="res://Carta Memória.png"
+dest_files=["res://.godot/imported/Carta Memória.png-9f92ff39b8566d0c76ca92992c3d9ebb.ctex"]
 
 [params]
 
