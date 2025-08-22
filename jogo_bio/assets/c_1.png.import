@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2udo2nny7vgo"
-path="res://.godot/imported/Carta Memória.png-9f92ff39b8566d0c76ca92992c3d9ebb.ctex"
+uid="uid://ddf6ohw4ktj2m"
+path="res://.godot/imported/c_1.png-a739317f765e45f6eaae81c2294f5bd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Carta Memória.png"
-dest_files=["res://.godot/imported/Carta Memória.png-9f92ff39b8566d0c76ca92992c3d9ebb.ctex"]
+source_file="res://assets/c_1.png"
+dest_files=["res://.godot/imported/c_1.png-a739317f765e45f6eaae81c2294f5bd9.ctex"]
 
 [params]
 
