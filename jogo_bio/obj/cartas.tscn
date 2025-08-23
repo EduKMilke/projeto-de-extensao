@@ -121,19 +121,24 @@ custom_minimum_size = Vector2(100, 150)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -580.0
-offset_bottom = -1130.0
+offset_left = -72.0
+offset_top = -74.0
+offset_right = -653.0
+offset_bottom = -1204.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 0.8)
+pivot_offset = Vector2(70, 75)
 script = ExtResource("1_ggf44")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 140.0
-offset_bottom = 152.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.979
+anchor_bottom = 1.007
+offset_right = -0.0180054
+offset_bottom = -0.0500183
+pivot_offset = Vector2(70, 75)
 texture = ExtResource("2_8f3x3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -146,9 +151,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 1.0
-offset_top = 1.0
-offset_right = -1.0
-offset_bottom = 1.0
+offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_alignment = 1
