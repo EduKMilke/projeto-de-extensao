@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cylnf5wci3r0w"]
+[gd_scene load_steps=2 format=3 uid="uid://cylnf5wci3r0w"]
+
+[ext_resource type="Script" uid="uid://c2ho4o0uu0b8a" path="res://script/smenu.gd" id="1_64url"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -7,3 +9,30 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_64url")
+
+[node name="play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 413.0
+offset_right = 489.0
+offset_bottom = 482.0
+
+[node name="Label" type="Label" parent="play"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 691.0
+offset_right = 504.0
+offset_bottom = 748.0
+
+[node name="Label" type="Label" parent="sair"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
