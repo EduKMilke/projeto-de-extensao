@@ -22,11 +22,12 @@ offset_bottom = 482.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+text = "play"
 
 [node name="sair" type="Button" parent="."]
 layout_mode = 0
 offset_left = 208.0
-offset_top = 691.0
+offset_top = 671.0
 offset_right = 504.0
 offset_bottom = 748.0
 
@@ -34,5 +35,7 @@ offset_bottom = 748.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+text = "sair"
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]

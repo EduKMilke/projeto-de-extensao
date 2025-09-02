@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0mujflulvq6m"
-path="res://.godot/imported/c_0.png-6acbca680c609be16bf285858e1b2638.ctex"
+uid="uid://cc0lk4ktkeh1i"
+path="res://.godot/imported/s_pancreas.png-66ead232fd95c79b4a028963341a5892.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/c_0.png"
-dest_files=["res://.godot/imported/c_0.png-6acbca680c609be16bf285858e1b2638.ctex"]
+source_file="res://assets/digestorio/s_pancreas.png"
+dest_files=["res://.godot/imported/s_pancreas.png-66ead232fd95c79b4a028963341a5892.ctex"]
 
 [params]
 

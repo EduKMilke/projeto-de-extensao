@@ -149,13 +149,13 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.979
 anchor_bottom = 1.007
-offset_right = -0.0180054
-offset_bottom = -0.0500183
+offset_right = 2.91901
+offset_bottom = -0.0499878
 pivot_offset = Vector2(70, 75)
 texture = ExtResource("2_8f3x3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 1)
+position = Vector2(72, 73.75)
 scale = Vector2(1, 0.8)
 
 [node name="Label" type="Label" parent="."]

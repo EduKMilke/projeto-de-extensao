@@ -24,6 +24,7 @@ offset_right = 8.0
 offset_bottom = 8.0
 
 [node name="Button4" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+layout_mode = 2
+offset_top = 2.0
+offset_right = 13.0
+offset_bottom = 12.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dupn4srr46fea"
-path="res://.godot/imported/c_3.png-1f031434168d428e98a9df39ced9267e.ctex"
+uid="uid://b3sgcboxt2xxf"
+path="res://.godot/imported/s_delgado.png-45c697df12070de4fa58b9bc807c7388.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/c_3.png"
-dest_files=["res://.godot/imported/c_3.png-1f031434168d428e98a9df39ced9267e.ctex"]
+source_file="res://assets/digestorio/s_delgado.png"
+dest_files=["res://.godot/imported/s_delgado.png-45c697df12070de4fa58b9bc807c7388.ctex"]
 
 [params]
 

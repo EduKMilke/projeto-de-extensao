@@ -17,7 +17,7 @@ var back_texture: Texture2D = preload("res://assets/Carta Memória.png")
 @onready var texture_rect = $TextureRect
 @onready var label = $Label
 @onready var anim=$AnimationPlayer
-
+@onready var spr=$Sprite2D
 func initialize(id, content, is_text_card):
 	pair_id = id
 	is_flipped = false
@@ -39,6 +39,7 @@ func flip_card():
 	if not is_flipped and not is_matched:
 		is_flipped = true
 		anim.play("virar")
+		spr.scale/=1000
 		await get_tree().create_timer(0.5).timeout
 
 
@@ -59,7 +60,6 @@ func flip_back():
 		is_flipped = false
 		anim.play("virar")
 		await get_tree().create_timer(0.5).timeout
-
 		texture_rect.show()
 		texture_rect.texture = back_texture
 		label.hide()

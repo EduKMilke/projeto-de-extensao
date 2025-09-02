@@ -4,19 +4,34 @@ extends Control
 var card_scene = preload("res://obj/cartas.tscn")
 
 
-var pairs_data = [
-	["Célula responsável por gerar ATP", preload("res://assets/c_3.png")],
-	["Centro de controle da célula",preload("res://assets/c_2.png")],
-	["Respirar o oxigênio da água", preload("res://assets/c_1.png")],
-
-]
-
 var flipped_cards := []
 var is_processing_move := false
+var pairs_data = []
 
 func _ready():
+	if Global.s_dige == true:
+		if Global.dific==1:
+			pairs_data = [
+			["Reponsavel absorção de nutrientes", preload("res://assets/digestorio/s_delgado.png")],
+			["Atua no início da digestão", preload("res://assets/digestorio/s_estomago.png")],
+			["Produz bile", preload("res://assets/digestorio/s_figado.png")],
+		]
+		if Global.dific==2:
+			pairs_data = [
+			["Reponsavel absorção de nutrientes", preload("res://assets/digestorio/s_delgado.png")],
+			["Atua no início da digestão", preload("res://assets/digestorio/s_estomago.png")],
+			["Produz bile", preload("res://assets/digestorio/s_figado.png")],
+			["Produz enzimas digestivas", preload("res://assets/digestorio/s_pancreas.png")],
+		]
+		if Global.dific==3:
+			pairs_data = [
+			["Reponsavel absorção de nutrientes", preload("res://assets/digestorio/s_delgado.png")],
+			["Atua no início da digestão", preload("res://assets/digestorio/s_estomago.png")],
+			["Produz bile", preload("res://assets/digestorio/s_figado.png")],
+			["Produz bile", preload("res://assets/digestorio/s_figado.png")],
+			["Produz enzimas digestivas", preload("res://assets/digestorio/s_pancreas.png")],
+		]
 	start_new_game()
-
 func start_new_game():
 
 	for child in grid_container.get_children():
