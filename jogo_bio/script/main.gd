@@ -10,20 +10,20 @@ var pairs_data = []
 
 func _ready():
 	if Global.s_dige == true:
-		if Global.dific==1:
+		if Global.dific==0:
 			pairs_data = [
 			["Reponsavel absorção de nutrientes", preload("res://assets/digestorio/s_delgado.png")],
 			["Atua no início da digestão", preload("res://assets/digestorio/s_estomago.png")],
 			["Produz bile", preload("res://assets/digestorio/s_figado.png")],
 		]
-		if Global.dific==2:
+		if Global.dific==1:
 			pairs_data = [
 			["Reponsavel absorção de nutrientes", preload("res://assets/digestorio/s_delgado.png")],
 			["Atua no início da digestão", preload("res://assets/digestorio/s_estomago.png")],
 			["Produz bile", preload("res://assets/digestorio/s_figado.png")],
 			["Produz enzimas digestivas", preload("res://assets/digestorio/s_pancreas.png")],
 		]
-		if Global.dific==3:
+		if Global.dific==2:
 			pairs_data = [
 			["Reponsavel absorção de nutrientes", preload("res://assets/digestorio/s_delgado.png")],
 			["Atua no início da digestão", preload("res://assets/digestorio/s_estomago.png")],
@@ -90,8 +90,10 @@ func _check_match():
 
 		if grid_container.get_child_count() <= 2:
 			print("Parabéns, você venceu!")
+			
 			await get_tree().create_timer(2.0).timeout
-			start_new_game()
+			Global.reset_tudo()
+			get_tree().change_scene_to_file("res://cenas/escolha_s.tscn")
 	else:
 		card1.flip_back()
 		card2.flip_back()
