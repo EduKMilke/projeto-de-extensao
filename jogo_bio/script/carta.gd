@@ -39,7 +39,7 @@ func flip_card():
 	if not is_flipped and not is_matched:
 		is_flipped = true
 		anim.play("virar")
-		spr.scale/=1000
+
 		await get_tree().create_timer(0.5).timeout
 
 
@@ -59,6 +59,7 @@ func flip_back():
 	if not is_matched:
 		is_flipped = false
 		anim.play("virar")
+
 		await get_tree().create_timer(0.5).timeout
 		texture_rect.show()
 		texture_rect.texture = back_texture

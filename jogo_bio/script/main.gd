@@ -9,27 +9,59 @@ var is_processing_move := false
 var pairs_data = []
 
 func _ready():
+	randomize()
+
 	if Global.s_dige == true:
+		var delgado=["Reponsavel absorção \nde nutrientes","Mede até sete metros \nde comprimento"].pick_random()
+		var estomago=["Atua no início da digestão","Mede até sete metros \nde comprimento",""].pick_random()
+		var figado =["",""].pick_random()
+		var digestorio=["",""].pick_random()
+		var pancreas=["",""].pick_random()
 		if Global.dific==0:
 			pairs_data = [
-			["Reponsavel absorção de nutrientes", preload("res://assets/digestorio/s_delgado.png")],
-			["Atua no início da digestão", preload("res://assets/digestorio/s_estomago.png")],
-			["Produz bile", preload("res://assets/digestorio/s_figado.png")],
+			[delgado, preload("res://assets/digestorio/s_delgado.png")],
+			[estomago, preload("res://assets/digestorio/s_estomago.png")],
+
 		]
 		if Global.dific==1:
 			pairs_data = [
-			["Reponsavel absorção de nutrientes", preload("res://assets/digestorio/s_delgado.png")],
-			["Atua no início da digestão", preload("res://assets/digestorio/s_estomago.png")],
-			["Produz bile", preload("res://assets/digestorio/s_figado.png")],
-			["Produz enzimas digestivas", preload("res://assets/digestorio/s_pancreas.png")],
+			[delgado, preload("res://assets/digestorio/s_delgado.png")],
+			[estomago, preload("res://assets/digestorio/s_estomago.png")],
+			[digestorio, preload("res://assets/digestorio/s_figado.png")],
+
 		]
 		if Global.dific==2:
 			pairs_data = [
-			["Reponsavel absorção de nutrientes", preload("res://assets/digestorio/s_delgado.png")],
-			["Atua no início da digestão", preload("res://assets/digestorio/s_estomago.png")],
-			["Produz bile", preload("res://assets/digestorio/s_figado.png")],
-			["Produz bile", preload("res://assets/digestorio/s_figado.png")],
-			["Produz enzimas digestivas", preload("res://assets/digestorio/s_pancreas.png")],
+			[delgado, preload("res://assets/digestorio/s_delgado.png")],
+			[estomago, preload("res://assets/digestorio/s_estomago.png")],
+			[digestorio, preload("res://assets/digestorio/s_figado.png")],
+			[pancreas, preload("res://assets/digestorio/s_pancreas.png")],
+		]
+	if Global.s_musc == true:
+		var delgado=["Reponsavel absorção \nde nutrientes","Mede até sete metros \nde comprimento"].pick_random()
+		var estomago=["Atua no início da digestão","Mede até sete metros \nde comprimento",""].pick_random()
+		var figado =["",""].pick_random()
+		var digestorio=["",""].pick_random()
+		var pancreas=["",""].pick_random()
+		if Global.dific==0:
+			pairs_data = [
+			[delgado, preload("res://assets/digestorio/s_delgado.png")],
+			[estomago, preload("res://assets/digestorio/s_estomago.png")],
+
+		]
+		if Global.dific==1:
+			pairs_data = [
+			[delgado, preload("res://assets/digestorio/s_delgado.png")],
+			[estomago, preload("res://assets/digestorio/s_estomago.png")],
+			[digestorio, preload("res://assets/digestorio/s_figado.png")],
+
+		]
+		if Global.dific==2:
+			pairs_data = [
+			[delgado, preload("res://assets/digestorio/s_delgado.png")],
+			[estomago, preload("res://assets/digestorio/s_estomago.png")],
+			[digestorio, preload("res://assets/digestorio/s_figado.png")],
+			[pancreas, preload("res://assets/digestorio/s_pancreas.png")],
 		]
 	start_new_game()
 func start_new_game():
@@ -66,20 +98,18 @@ func start_new_game():
 func _on_card_flipped(card):
 	if is_processing_move:
 		return
-
 	flipped_cards.append(card)
 
 	if flipped_cards.size() == 2:
+		Global.p_click=false
 		is_processing_move = true
 
-
-
-		Global.p_click=false
 		await get_tree().create_timer(2).timeout
 		_check_match()
 
 
 func _check_match():
+	Global.p_click=false
 	var card1 = flipped_cards[0]
 	var card2 = flipped_cards[1]
 
@@ -90,7 +120,6 @@ func _check_match():
 
 		if grid_container.get_child_count() <= 2:
 			print("Parabéns, você venceu!")
-			
 			await get_tree().create_timer(2.0).timeout
 			Global.reset_tudo()
 			get_tree().change_scene_to_file("res://cenas/escolha_s.tscn")
