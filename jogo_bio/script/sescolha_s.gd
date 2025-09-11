@@ -18,6 +18,33 @@ func _on_b_s_diges_pressed() -> void:
 	get_tree().change_scene_to_file("res://cenas/jogo.tscn")
 
 
-func _on_button_2_pressed() -> void:
+func _on_b_s_musc_pressed() -> void:
 	Global.s_musc=true
+	get_tree().change_scene_to_file("res://cenas/jogo.tscn")
+
+func _on_b_s_resp_pressed() -> void:
+	Global.s_resp=true
+	get_tree().change_scene_to_file("res://cenas/jogo.tscn")
+
+
+func _on_b_s_repro_pressed() -> void:
+	Global.s_repro=true
+	get_tree().change_scene_to_file("res://cenas/jogo.tscn")
+
+func _on_b_s_reprofem_pressed() -> void:
+	Global.s_reprofem=true
+	get_tree().change_scene_to_file("res://cenas/jogo.tscn")
+
+
+func _on_b_s_excre_pressed() -> void:
+	Global.s_excre=true
+	get_tree().change_scene_to_file("res://cenas/jogo.tscn")
+	
+func _on_b_s_esque_pressed() -> void:
+	Global.s_esque=true
+	get_tree().change_scene_to_file("res://cenas/jogo.tscn")
+
+
+func _on_b_s_nerv_pressed() -> void:
+	Global.s_nerv=true
 	get_tree().change_scene_to_file("res://cenas/jogo.tscn")

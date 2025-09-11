@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cylnf5wci3r0w"]
+[gd_scene load_steps=3 format=3 uid="uid://cylnf5wci3r0w"]
 
 [ext_resource type="Script" uid="uid://c2ho4o0uu0b8a" path="res://script/smenu.gd" id="1_64url"]
+[ext_resource type="Texture2D" uid="uid://1o2dhweh1vw2" path="res://assets/bege.png" id="2_nbnbt"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,29 +14,44 @@ script = ExtResource("1_64url")
 
 [node name="play" type="Button" parent="."]
 layout_mode = 0
-offset_left = 212.0
-offset_top = 413.0
-offset_right = 489.0
-offset_bottom = 482.0
+offset_left = 202.0
+offset_top = 528.0
+offset_right = 482.0
+offset_bottom = 598.0
 
 [node name="Label" type="Label" parent="play"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "play"
+offset_left = 103.0
+offset_top = 19.0
+offset_right = 316.0
+offset_bottom = 57.0
+text = "Jogar"
 
 [node name="sair" type="Button" parent="."]
 layout_mode = 0
-offset_left = 208.0
-offset_top = 671.0
-offset_right = 504.0
-offset_bottom = 748.0
+offset_left = 200.0
+offset_top = 670.0
+offset_right = 480.0
+offset_bottom = 740.0
 
 [node name="Label" type="Label" parent="sair"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "sair"
+offset_left = 108.0
+offset_top = 16.0
+offset_right = 349.0
+offset_bottom = 79.0
+text = "Sair"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+z_index = -1
+layout_mode = 0
+offset_left = -93.0
+offset_top = -17.0
+offset_right = 907.0
+offset_bottom = 1296.0
+mouse_filter = 2
+texture = ExtResource("2_nbnbt")
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]

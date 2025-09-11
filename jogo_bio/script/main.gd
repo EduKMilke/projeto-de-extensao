@@ -12,11 +12,11 @@ func _ready():
 	randomize()
 
 	if Global.s_dige == true:
-		var delgado=["Reponsavel absorção \nde nutrientes","Mede até sete metros \nde comprimento"].pick_random()
-		var estomago=["Atua no início da digestão","Mede até sete metros \nde comprimento",""].pick_random()
-		var figado =["",""].pick_random()
-		var digestorio=["",""].pick_random()
-		var pancreas=["",""].pick_random()
+		var delgado=["Reponsável pela absorção \nde nutrientes","Mede até sete metros \nde comprimento"].pick_random()
+		var estomago=["Pode armazenar até \n2 litros de comida.","Possui um muco protetor \ndo próprio ácido que produz"].pick_random()
+		var figado =["Filtra toxinas \ndo sangue.","Produz bile \npara digestão."].pick_random()
+		var intestinog=["Absorve água \ndos resíduos.","Mede cerca \nde 1,5 metro."].pick_random()
+		var pancreas=["Regula açúcar \nno sangue.","Produz sucos \ndigestivos."].pick_random()
 		if Global.dific==0:
 			pairs_data = [
 			[delgado, preload("res://assets/digestorio/s_delgado.png")],
@@ -27,41 +27,41 @@ func _ready():
 			pairs_data = [
 			[delgado, preload("res://assets/digestorio/s_delgado.png")],
 			[estomago, preload("res://assets/digestorio/s_estomago.png")],
-			[digestorio, preload("res://assets/digestorio/s_figado.png")],
+			[figado, preload("res://assets/digestorio/s_figado.png")],
 
 		]
 		if Global.dific==2:
 			pairs_data = [
 			[delgado, preload("res://assets/digestorio/s_delgado.png")],
 			[estomago, preload("res://assets/digestorio/s_estomago.png")],
-			[digestorio, preload("res://assets/digestorio/s_figado.png")],
+			[figado, preload("res://assets/digestorio/s_figado.png")],
 			[pancreas, preload("res://assets/digestorio/s_pancreas.png")],
 		]
 	if Global.s_musc == true:
-		var delgado=["Reponsavel absorção \nde nutrientes","Mede até sete metros \nde comprimento"].pick_random()
-		var estomago=["Atua no início da digestão","Mede até sete metros \nde comprimento",""].pick_random()
-		var figado =["",""].pick_random()
-		var digestorio=["",""].pick_random()
-		var pancreas=["",""].pick_random()
+		var abdomen=["Protege órgãos \nvitais internos","Auxilia na \npostura corporal"].pick_random()
+		var biceps=["Flexiona o braço \nno cotovelo","É Formado por \ndois feixes musculares."].pick_random()
+		var coracao =["Bombeia 5 litros \nde sangue/minuto","Bate cerca de \n100 mil vezes/dia."].pick_random()
+		var deltoide=["Eleva o braço \nlateralmente.","Cobre a articulação \ndo ombro"].pick_random()
+		
 		if Global.dific==0:
 			pairs_data = [
-			[delgado, preload("res://assets/digestorio/s_delgado.png")],
-			[estomago, preload("res://assets/digestorio/s_estomago.png")],
+			[abdomen, preload("res://assets/muscular/s_abdomen.png")],
+			[biceps, preload("res://assets/muscular/s_biceps.png")],
 
 		]
 		if Global.dific==1:
 			pairs_data = [
-			[delgado, preload("res://assets/digestorio/s_delgado.png")],
-			[estomago, preload("res://assets/digestorio/s_estomago.png")],
-			[digestorio, preload("res://assets/digestorio/s_figado.png")],
+			[abdomen, preload("res://assets/muscular/s_abdomen.png")],
+			[biceps, preload("res://assets/muscular/s_biceps.png")],
+			[coracao, preload("res://assets/muscular/s_coracao.png")],
 
 		]
 		if Global.dific==2:
 			pairs_data = [
-			[delgado, preload("res://assets/digestorio/s_delgado.png")],
-			[estomago, preload("res://assets/digestorio/s_estomago.png")],
-			[digestorio, preload("res://assets/digestorio/s_figado.png")],
-			[pancreas, preload("res://assets/digestorio/s_pancreas.png")],
+			[abdomen, preload("res://assets/muscular/s_abdomen.png")],
+			[biceps, preload("res://assets/muscular/s_biceps.png")],
+			[coracao, preload("res://assets/muscular/s_coracao.png")],
+			[deltoide, preload("res://assets/muscular/s_deltoide.png")],
 		]
 	start_new_game()
 func start_new_game():
