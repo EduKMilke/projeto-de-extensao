@@ -12,7 +12,7 @@ config_version=5
 
 config/name="jogo de biologia"
 run/main_scene="uid://cylnf5wci3r0w"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 
 [autoload]
 

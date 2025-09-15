@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bbotj66nw8i5d"]
+[gd_scene load_steps=13 format=3 uid="uid://bbotj66nw8i5d"]
 
 [ext_resource type="Script" uid="uid://dphruiuubd51p" path="res://script/sescolha_s.gd" id="1_sschf"]
 [ext_resource type="Texture2D" uid="uid://b7ci3pfmki8kg" path="res://assets/bege_cinza_do_eduardo.png" id="2_4clwu"]
@@ -7,14 +7,41 @@
 [ext_resource type="Texture2D" uid="uid://k3xf65507fte" path="res://assets/respiratório/s_respiratorio.png" id="4_x5xcb"]
 [ext_resource type="Texture2D" uid="uid://c0dpnuepsvvjo" path="res://assets/reprodutor/s_reprodutormas.png" id="5_cxvhr"]
 [ext_resource type="Texture2D" uid="uid://cba8iamjgp2ri" path="res://assets/excretor/s_excretor.png" id="6_140pv"]
-[ext_resource type="Texture2D" uid="uid://d3yec7bw4hhql" path="res://assets/verde_dif.png" id="7_140pv"]
 [ext_resource type="Texture2D" uid="uid://c40c1roxumwu3" path="res://assets/esqueletico/s_esqueletico.png" id="7_b85oo"]
-[ext_resource type="Script" uid="uid://dci2hn43vkiaj" path="res://cenas/dific.gd" id="8_b85oo"]
 [ext_resource type="Texture2D" uid="uid://dkvgmroqvbp5h" path="res://assets/nervoso/s_nervoso.png" id="8_fhq1v"]
 [ext_resource type="Texture2D" uid="uid://d053yxbm5dvlj" path="res://assets/reprodutor/s_reprodutorm.png" id="9_4clwu"]
-[ext_resource type="Texture2D" uid="uid://bs1cvqc4c3t3e" path="res://assets/amarelo_dif.png" id="9_28y4r"]
-[ext_resource type="Texture2D" uid="uid://7v8skowpdaw" path="res://assets/vermelho_dif.png" id="10_wknbr"]
 [ext_resource type="Texture2D" uid="uid://1o2dhweh1vw2" path="res://assets/bege.png" id="15_28y4r"]
+
+[sub_resource type="GDScript" id="GDScript_140pv"]
+script/source = "extends Button
+
+
+@export var icones: Array[Texture2D]
+
+
+var icone_atual = 0
+
+
+func _ready():
+	
+	self.pressed.connect(on_button_pressed)
+	
+	
+	if icones.size() > 0:
+		self.icon = icones[0]
+
+ 
+func on_button_pressed():
+	
+	icone_atual += 1
+	
+	
+	if icone_atual >= icones.size():
+		icone_atual = 0
+		
+	
+	self.icon = icones[icone_atual]
+"
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -78,7 +105,7 @@ scale = Vector2(0.413793, 0.544145)
 texture = ExtResource("4_x5xcb")
 
 [node name="b_s_repro" type="Button" parent="."]
-layout_mode = 2
+layout_mode = 0
 offset_left = 116.0
 offset_top = 208.0
 offset_right = 266.0
@@ -96,9 +123,7 @@ offset_left = -221.0
 offset_top = 112.0
 offset_right = 407.0
 offset_bottom = 185.0
-icon = ExtResource("7_140pv")
-script = ExtResource("8_b85oo")
-icones = Array[Texture2D]([ExtResource("7_140pv"), ExtResource("9_28y4r"), ExtResource("10_wknbr")])
+script = SubResource("GDScript_140pv")
 
 [node name="Label" type="Label" parent="dific"]
 layout_mode = 0
