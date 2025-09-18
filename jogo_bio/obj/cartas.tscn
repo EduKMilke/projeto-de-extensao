@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dl7emo7hoq4ly"]
+[gd_scene load_steps=9 format=3 uid="uid://dl7emo7hoq4ly"]
 
 [ext_resource type="Script" uid="uid://d0l8hk3ekjg86" path="res://script/carta.gd" id="1_ggf44"]
 [ext_resource type="Texture2D" uid="uid://dd1ghah4fkqdt" path="res://assets/Carta Memória.png" id="2_8f3x3"]
+[ext_resource type="Texture2D" uid="uid://dkirlrn0yq7sk" path="res://assets/fundo.png" id="3_8f3x3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ggf44"]
 
@@ -124,24 +125,24 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -72.0
-offset_top = -74.0
+offset_top = -75.0
 offset_right = -653.0
-offset_bottom = -1204.0
+offset_bottom = -845.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 0.8)
 pivot_offset = Vector2(70, 75)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ggf44")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ggf44")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_ggf44")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ggf44")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ggf44")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ggf44")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_ggf44")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ggf44")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_ggf44")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ggf44")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ggf44")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ggf44")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ggf44")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ggf44")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ggf44")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ggf44")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ggf44")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ggf44")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ggf44")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ggf44")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ggf44")
 script = ExtResource("1_ggf44")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -160,13 +161,19 @@ texture = ExtResource("2_8f3x3")
 position = Vector2(72, 73.75)
 scale = Vector2(1, 0.8)
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(72, 73.75001)
+scale = Vector2(1, 1.0892857)
+texture = ExtResource("3_8f3x3")
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 1.0
-offset_right = -2.0
+anchors_preset = -1
+anchor_right = 0.014
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 133.054
+offset_bottom = 143.75
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_alignment = 1

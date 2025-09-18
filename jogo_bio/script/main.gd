@@ -12,11 +12,11 @@ func _ready():
 	randomize()
 
 	if Global.s_dige == true:
-		var delgado=["Reponsável pela absorção \nde nutrientes","Mede até sete metros \nde comprimento"].pick_random()
-		var estomago=["Pode armazenar até \n2 litros de comida.","Possui um muco protetor \ndo próprio ácido que produz"].pick_random()
-		var figado =["Filtra toxinas \ndo sangue.","Produz bile \npara digestão."].pick_random()
-		var intestinog=["Absorve água \ndos resíduos.","Mede cerca \nde 1,5 metro."].pick_random()
-		var pancreas=["Regula açúcar \nno sangue.","Produz sucos \ndigestivos."].pick_random()
+		var delgado=["Reponsável pela\nabsorção de\nnutrientes","Mede até\nsete metros\nde comprimento"].pick_random()
+		var estomago=["Pode armazenar\naté 2 litros \nde comida.","Possui um muco\nprotetor do próprio"].pick_random()
+		var figado =["Filtra toxinas\ndo sangue.","Produz bile\npara digestão."].pick_random()
+		var _intestinog=["Absorve água\ndos resíduos.","Mede cerca\nde 1,5 metro."].pick_random()
+		var pancreas=["Regula açúcar\nno sangue.","Produz sucos\ndigestivos."].pick_random()
 		if Global.dific==0:
 			pairs_data = [
 			[delgado, preload("res://assets/digestorio/s_delgado.png")],
@@ -38,10 +38,10 @@ func _ready():
 			[pancreas, preload("res://assets/digestorio/s_pancreas.png")],
 		]
 	if Global.s_musc == true:
-		var abdomen=["Protege órgãos \nvitais internos","Auxilia na \npostura corporal"].pick_random()
-		var biceps=["Flexiona o braço \nno cotovelo","É Formado por \ndois feixes musculares."].pick_random()
-		var coracao =["Bombeia 5 litros \nde sangue/minuto","Bate cerca de \n100 mil vezes/dia."].pick_random()
-		var deltoide=["Eleva o braço \nlateralmente.","Cobre a articulação \ndo ombro"].pick_random()
+		var abdomen=["Protege órgãos\nvitais internos","Auxilia na\npostura corporal"].pick_random()
+		var biceps=["Flexiona o braço\nno cotovelo","É Formado por\ndois feixes musculares."].pick_random()
+		var coracao =["Bombeia 5 litros\nde sangue/minuto","Bate cerca de\n100 mil vezes/dia."].pick_random()
+		var deltoide=["Eleva o braço\nlateralmente.","Cobre a articulação\ndo ombro"].pick_random()
 		
 		if Global.dific==0:
 			pairs_data = [
@@ -62,6 +62,58 @@ func _ready():
 			[biceps, preload("res://assets/muscular/s_biceps.png")],
 			[coracao, preload("res://assets/muscular/s_coracao.png")],
 			[deltoide, preload("res://assets/muscular/s_deltoide.png")],
+		]
+	if Global.s_esque == true:
+		var coluna=["Reponsável pela absorção \nde nutrientes","Mede até sete metros \nde comprimento"].pick_random()
+		var cranio=["Protege o cérebro","Quando bebê é mole"].pick_random()
+		var escapula =["A escápula, ou omoplata","Produz bile \npara digestão."].pick_random()
+		var femur=["osso mais longo\ne mais forte\ndo corpo humano","suporta força\nequivalente a 30 vezes\no peso do corpo"].pick_random()
+		var esterno=["é o osso central\ndo peito","onde as costelas\nse fixam"].pick_random()
+		if Global.dific==0:
+			pairs_data = [
+			[coluna, preload("res://assets/esqueletico/s_colunaver.png")],
+			[cranio, preload("res://assets/esqueletico/s_cranio.png")],
+
+		]
+		if Global.dific==1:
+			pairs_data = [
+			[coluna, preload("res://assets/esqueletico/s_colunaver.png")],
+			[cranio, preload("res://assets/esqueletico/s_cranio.png")],
+			[escapula, preload("res://assets/esqueletico/s_escápula.png")],
+			[femur, preload("res://assets/esqueletico/s_fêmur.png")],
+		]
+		if Global.dific==2:
+			pairs_data = [
+			[coluna, preload("res://assets/esqueletico/s_colunaver.png")],
+			[cranio, preload("res://assets/esqueletico/s_cranio.png")],
+			[escapula, preload("res://assets/esqueletico/s_escápula.png")],
+			[femur, preload("res://assets/esqueletico/s_fêmur.png")],
+			[esterno, preload("res://assets/esqueletico/s_esterno.png")],
+		]
+	if Global.s_excre == true:
+		var bexiga=[].pick_random()
+		var rim=[].pick_random()
+		var ureter=[].pick_random()
+		var veiare=[].pick_random()
+		if Global.dific==0:
+			pairs_data = [
+			[bexiga, preload("res://assets/excretor/bexiga.png")],
+			[rim, preload("res://assets/excretor/rim.png")],
+
+		]
+		if Global.dific==1:
+			pairs_data = [
+			[bexiga, preload("res://assets/excretor/bexiga.png")],
+			[rim, preload("res://assets/excretor/rim.png")],
+			[ureter, preload("res://assets/excretor/ureter.png")],
+
+		]
+		if Global.dific==2:
+			pairs_data = [
+			[bexiga, preload("res://assets/excretor/bexiga.png")],
+			[rim, preload("res://assets/excretor/rim.png")],
+			[ureter, preload("res://assets/excretor/ureter.png")],
+			[veiare, preload("res://assets/excretor/veia renal-cava.png")],
 		]
 	start_new_game()
 func start_new_game():

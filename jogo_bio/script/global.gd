@@ -13,3 +13,7 @@ func reset_tudo():
 	Global.dific=0
 	s_dige=false
 	s_musc=false
+	s_esque=false
+	s_excre=false
+	s_nerv=false
+	s_resp=false
