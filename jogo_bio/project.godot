@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.5", "Mobile")
 [autoload]
 
 Global="*res://script/global.gd"
+ControleSom="*res://obj/controle_som.tscn"
 
 [display]
 
@@ -35,3 +36,4 @@ esq_c={
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
