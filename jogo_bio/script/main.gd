@@ -64,11 +64,11 @@ func _ready():
 			[deltoide, preload("res://assets/muscular/s_deltoide.png")],
 		]
 	if Global.s_esque == true:
-		var coluna=["Reponsável pela absorção \nde nutrientes","Mede até sete metros \nde comprimento"].pick_random()
-		var cranio=["Protege o cérebro","Quando bebê é mole"].pick_random()
-		var escapula =["A escápula, ou omoplata","Produz bile \npara digestão."].pick_random()
-		var femur=["osso mais longo\ne mais forte\ndo corpo humano","suporta força\nequivalente a 30 vezes\no peso do corpo"].pick_random()
-		var esterno=["é o osso central\ndo peito","onde as costelas\nse fixam"].pick_random()
+		var coluna=["Protege a \nmedula espinhal","Possui 33 \nvértebras"].pick_random()
+		var cranio=["Protege o cérebro","Da suporte à face"].pick_random()
+		var escapula =["Não se conecta diretamente \nà caixa toráxica","É mantida no lugar \npor 17 músculos diferentes."].pick_random()
+		var femur=["Osso mais longo\ne mais forte\ndo corpo humano","Suporta força\nequivalente a 30 vezes\no peso do corpo"].pick_random()
+		var esterno=["É o osso central\ndo peito","Onde as costelas\nse fixam"].pick_random()
 		if Global.dific==0:
 			pairs_data = [
 			[coluna, preload("res://assets/esqueletico/s_colunaver.png")],
@@ -91,10 +91,11 @@ func _ready():
 			[esterno, preload("res://assets/esqueletico/s_esterno.png")],
 		]
 	if Global.s_excre == true:
-		var bexiga=[].pick_random()
-		var rim=[].pick_random()
-		var ureter=[].pick_random()
-		var veiare=[].pick_random()
+		var bexiga=["Pode armazenar \naté 600ml de \nurina", "É incrivelmente \nelástica"].pick_random()
+		var rim=["Filtram cerca de \n180 litros de \nsangue por dia.", "Controlam o nível \nde sal e água"].pick_random()
+		var ureter=["Transportam urina \ndo rim para \n as bexigas", "Utilizam \ncontrações \nmusculares \nrítmicas"].pick_random()
+		var veiare=["Maior veia \ndo corpo", "Devolve o sangue \nsem oxigênio da \nparte inferior do \ncorpo ao coração.
+"].pick_random()
 		if Global.dific==0:
 			pairs_data = [
 			[bexiga, preload("res://assets/excretor/bexiga.png")],
@@ -113,7 +114,58 @@ func _ready():
 			[bexiga, preload("res://assets/excretor/bexiga.png")],
 			[rim, preload("res://assets/excretor/rim.png")],
 			[ureter, preload("res://assets/excretor/ureter.png")],
-			[veiare, preload("res://assets/excretor/veia renal-cava.png")],
+			[veiare, preload("res://assets/excretor/veia renal-caval.png")],
+		]
+	if Global.s_resp == true:
+		var bronquios=["São cruciais para \no mecanismo de \nlimpeza e \numidificação \ndo ar", "Controlam o \nfluxo de \nar e cílios para \nvarrer impurezas"].pick_random()
+		var traqueia=["Tubo com anéis \nde cartilagem que \na mantêm aberta.", "É revestida \npor cílios \nque limpam o \nar de partículas."].pick_random()
+		var vias=["Aquecem, \numedecem \ne filtram o ar \nque respiramos.", "Protegem o corpo \nde irritações \natravés do espirro"].pick_random()
+		var pulmoes=["Um deles é\n menor do que o \noutro para dar \nespaço para\n o coração", "Realizam \ntrocas \ngasosas"].pick_random()
+		if Global.dific==0:
+			pairs_data = [
+			[bronquios, preload("res://assets/respiratório/s_bronquiosebronquiolos.png")],
+			[traqueia, preload("res://assets/respiratório/s_traqueia.png")],
+
+		]
+		if Global.dific==1:
+			pairs_data = [
+			[bronquios, preload("res://assets/respiratório/s_bronquiosebronquiolos.png")],
+			[traqueia, preload("res://assets/respiratório/s_traqueia.png")],
+			[vias, preload("res://assets/respiratório/s_viasrespiratorias.png")],
+
+		]
+		if Global.dific==2:
+			pairs_data = [
+			[bronquios, preload("res://assets/respiratório/s_bronquiosebronquiolos.png")],
+			[traqueia, preload("res://assets/respiratório/s_traqueia.png")],
+			[vias, preload("res://assets/respiratório/s_viasrespiratorias.png")],
+			[pulmoes, preload("res://assets/respiratório/s_resp.png")],
+		]
+		
+	if Global.s_nerv == true:
+		var cerebelo=["Contém metade \ndos neurônios \ndo cérebro \ninteiro", "É crucial para \ncoordenação \nmotora fina, \nequilíbrio e \nfunções cognitivas"].pick_random()
+		var cerebro=["Consome cerca \nde 20% da energia \ntotal do corpo", "Consolida \nmemórias \ne remove resíduos \ndurante o \nsono"].pick_random()
+		var nervo=["Transmitem \nsinais a \nvelocidades \nincríveis", "Compostos por \nfeixes de fibras \nde células \nnervosas"].pick_random()
+		var troncoence=["Centro de \ncontrole vital \ndo corpo", "Regula o \nsono e a \ndeglutição"].pick_random()
+		if Global.dific==0:
+			pairs_data = [
+			[cerebelo, preload("res://assets/nervoso/s_cerebelo.png")],
+			[cerebro, preload("res://assets/nervoso/s_cerebro.png")],
+
+		]
+		if Global.dific==1:
+			pairs_data = [
+			[cerebelo, preload("res://assets/nervoso/s_cerebelo.png")],
+			[cerebro, preload("res://assets/nervoso/s_cerebro.png")],
+			[nervo, preload("res://assets/nervoso/s_nervo.png")],
+
+		]
+		if Global.dific==2:
+			pairs_data = [
+			[cerebelo, preload("res://assets/nervoso/s_cerebelo.png")],
+			[cerebro, preload("res://assets/nervoso/s_cerebro.png")],
+			[nervo, preload("res://assets/nervoso/s_nervo.png")],
+			[troncoence, preload("res://assets/nervoso/s_troncoence.png")],
 		]
 	start_new_game()
 func start_new_game():

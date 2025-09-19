@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cylnf5wci3r0w"]
+[gd_scene load_steps=8 format=3 uid="uid://cylnf5wci3r0w"]
 
 [ext_resource type="Script" uid="uid://c2ho4o0uu0b8a" path="res://script/smenu.gd" id="1_64url"]
 [ext_resource type="Texture2D" uid="uid://1o2dhweh1vw2" path="res://assets/bege.png" id="2_nbnbt"]
 [ext_resource type="Texture2D" uid="uid://c271u2f21cipf" path="res://assets/s_botao.png" id="2_nxpqr"]
-[ext_resource type="Texture2D" uid="uid://b8jqp7rmr51ey" path="res://assets/s_bioblink.png" id="3_hsu4v"]
 [ext_resource type="Texture2D" uid="uid://bg5sfont47rio" path="res://assets/Jogar.png" id="3_qcnrj"]
 [ext_resource type="Texture2D" uid="uid://ddyysikanxymg" path="res://assets/Sair.png" id="4_qygre"]
+[ext_resource type="Texture2D" uid="uid://dsbt7x1xb1e8g" path="res://assets/título.png" id="6_nxpqr"]
+[ext_resource type="AudioStream" uid="uid://cd15iwtnnp3h1" path="res://assets/músicas/PrimeiroSomTeste.mp3" id="7_qcnrj"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -56,8 +57,13 @@ mouse_filter = 2
 texture = ExtResource("2_nbnbt")
 
 [node name="SBioblink" type="Sprite2D" parent="."]
-position = Vector2(360, 200)
-texture = ExtResource("3_hsu4v")
+position = Vector2(353, 225)
+scale = Vector2(0.615, 0.655)
+texture = ExtResource("6_nxpqr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_qcnrj")
+autoplay = true
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]
