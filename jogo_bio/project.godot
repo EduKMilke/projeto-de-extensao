@@ -23,6 +23,8 @@ ControleSom="*res://obj/controle_som.tscn"
 
 window/size/viewport_width=720
 window/size/viewport_height=920
+window/size/mode=3
+window/stretch/mode="viewport"
 window/handheld/orientation=1
 window/main_scene="uid://bbotj66nw8i5d"
 
