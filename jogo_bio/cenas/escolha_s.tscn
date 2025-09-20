@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bbotj66nw8i5d"]
+[gd_scene load_steps=15 format=3 uid="uid://bbotj66nw8i5d"]
 
 [ext_resource type="Script" uid="uid://dphruiuubd51p" path="res://script/sescolha_s.gd" id="1_sschf"]
 [ext_resource type="Texture2D" uid="uid://b7ci3pfmki8kg" path="res://assets/bege_cinza_do_eduardo.png" id="2_4clwu"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dkvgmroqvbp5h" path="res://assets/nervoso/s_nervoso.png" id="8_fhq1v"]
 [ext_resource type="Texture2D" uid="uid://d053yxbm5dvlj" path="res://assets/reprodutor/s_reprodutorm.png" id="9_4clwu"]
 [ext_resource type="Texture2D" uid="uid://c34hm6y3b8hmy" path="res://assets/cadeado.png" id="12_b85oo"]
+[ext_resource type="Texture2D" uid="uid://bs1cvqc4c3t3e" path="res://assets/amarelo_dif.png" id="13_fhq1v"]
 [ext_resource type="Texture2D" uid="uid://1o2dhweh1vw2" path="res://assets/bege.png" id="15_28y4r"]
 
 [sub_resource type="GDScript" id="GDScript_140pv"]
@@ -187,6 +188,20 @@ texture = ExtResource("12_b85oo")
 position = Vector2(358, 372)
 texture = ExtResource("12_b85oo")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.9474059, 4.0670484e-06, 3.85046e-07, 1)
+position = Vector2(-209, 973.00006)
+scale = Vector2(0.14596774, 1.176923)
+texture = ExtResource("13_fhq1v")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = -256.0
+offset_top = 933.0
+offset_right = -163.0
+offset_bottom = 1011.0
+text = "Voltar"
+
 [connection signal="pressed" from="b_s_diges" to="." method="_on_b_s_diges_pressed"]
 [connection signal="pressed" from="b_s_musc" to="." method="_on_b_s_musc_pressed"]
 [connection signal="pressed" from="b_s_resp" to="." method="_on_b_s_resp_pressed"]
@@ -194,3 +209,4 @@ texture = ExtResource("12_b85oo")
 [connection signal="pressed" from="b_s_excre" to="." method="_on_b_s_excre_pressed"]
 [connection signal="pressed" from="b_s_esque" to="." method="_on_b_s_esque_pressed"]
 [connection signal="pressed" from="b_s_nerv" to="." method="_on_b_s_nerv_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
