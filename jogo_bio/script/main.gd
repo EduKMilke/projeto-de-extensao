@@ -66,8 +66,8 @@ func _ready():
 	if Global.s_esque == true:
 		var coluna=["Protege a\nmedula espinhal","Possui 33\nvértebras"].pick_random()
 		var cranio=["Protege o cérebro","Da suporte à face"].pick_random()
-		var escapula =["Não se conecta\n diretamente à\ncaixa toráxica","É mantida no lugar\npor 17 músculos \ndiferentes."].pick_random()
-		var femur=["Osso mais longo\ne mais forte\ndo corpo humano","Suporta força\nequivalente a 30 vezes\n o peso do corpo"].pick_random()
+		var escapula =["Não se conecta\n diretamente à\ncaixa toráxica","É mantida no lugar\npor 17 músculos\ndiferentes."].pick_random()
+		var femur=["Osso mais longo\ne mais forte\ndo corpo humano","Suporta força\nequivalente a 30 vezes\no peso do corpo"].pick_random()
 		var esterno=["É o osso central\ndo peito","Onde as costelas\nse fixam"].pick_random()
 		if Global.dific==0:
 			pairs_data = [
@@ -142,7 +142,7 @@ func _ready():
 		]
 		
 	if Global.s_nerv == true:
-		var cerebelo=["Contém metade\ndos neurônios\ndo cérebro\ninteiro", "É crucial para\nfunções \ncognitivas"].pick_random()
+		var cerebelo=["Contém metade\ndos neurônios\ndo cérebro\ninteiro", "É crucial para\nfunções\ncognitivas"].pick_random()
 		var cerebro=["Consome cerca\nde 20% da \nenergia\ntotal do corpo", "Consolida\nmemórias"].pick_random()
 		var nervo=["Transmitem\nsinais a\nvelocidades\nincríveis", "Compostos por\nfeixes de fibras\nde células\nnervosas"].pick_random()
 		var troncoence=["Centro de\ncontrole vital\ndo corpo", "Regula o\nsono e a\ndeglutição"].pick_random()
