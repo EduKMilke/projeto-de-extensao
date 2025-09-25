@@ -31,74 +31,23 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sschf")
 
-[node name="b_s_diges" type="Button" parent="."]
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0.75, 0, 1)
 layout_mode = 0
-offset_left = -237.0
-offset_top = 208.0
-offset_right = -79.0
-offset_bottom = 536.0
-icon = ExtResource("2_4clwu")
-icon_alignment = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="b_s_diges"]
-position = Vector2(79, 156)
-scale = Vector2(1, 1.20667)
-texture = ExtResource("2_362qe")
-
-[node name="b_s_musc" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.071
-anchor_bottom = 0.043
-offset_left = -59.0
-offset_top = 208.0
-offset_right = 39.88
-offset_bottom = 472.96
-icon = ExtResource("2_4clwu")
-
-[node name="Sprite2D" type="Sprite2D" parent="b_s_musc"]
-position = Vector2(80, 185)
-scale = Vector2(1.00714, 0.966667)
-texture = ExtResource("2_m37ia")
-
-[node name="b_s_resp" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.017
-anchor_top = 0.022
-anchor_right = 0.029
-anchor_bottom = 0.041
-offset_left = -220.726
-offset_top = 538.76
-offset_right = -95.938
-offset_bottom = 849.28
-icon = ExtResource("2_4clwu")
-
-[node name="Sprite2D" type="Sprite2D" parent="b_s_resp"]
-position = Vector2(74, 157.625)
-scale = Vector2(0.413793, 0.544145)
-texture = ExtResource("4_x5xcb")
-
-[node name="b_s_repro" type="Button" parent="."]
-layout_mode = 0
-offset_left = 116.0
-offset_top = 208.0
-offset_right = 266.0
-offset_bottom = 528.0
-icon = ExtResource("2_4clwu")
-
-[node name="Sprite2D" type="Sprite2D" parent="b_s_repro"]
-modulate = Color(0.6027341, 0.6027341, 0.6027341, 1)
-position = Vector2(72, 170)
-scale = Vector2(0.878049, 1.08261)
-texture = ExtResource("5_cxvhr")
+offset_left = -110.0
+offset_top = 101.0
+offset_right = -41.0
+offset_bottom = 124.0
+scale = Vector2(5.3164864, 3.3216655)
+text = "Sistemas"
 
 [node name="dific" type="Button" parent="."]
 layout_mode = 0
-offset_left = -221.0
-offset_top = 112.0
-offset_right = 407.0
-offset_bottom = 185.0
+offset_left = -158.0
+offset_top = 933.0
+offset_right = 470.0
+offset_bottom = 1006.0
+scale = Vector2(0.9577689, 1.040032)
 script = SubResource("GDScript_140pv")
 
 [node name="Label" type="Label" parent="dific"]
@@ -110,54 +59,25 @@ theme_override_font_sizes/font_size = 35
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="b_s_excre" type="Button" parent="."]
+[node name="Label2" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 283.0
-offset_top = 560.0
-offset_right = 433.0
-offset_bottom = 880.0
-icon = ExtResource("2_4clwu")
-
-[node name="Sprite2D" type="Sprite2D" parent="b_s_excre"]
-position = Vector2(80, 165.00003)
-scale = Vector2(0.2619648, 0.40806043)
-texture = ExtResource("7_140pv")
-
-[node name="b_s_esque" type="Button" parent="."]
-layout_mode = 0
-offset_left = 116.0
-offset_top = 560.0
-offset_right = 266.0
-offset_bottom = 880.0
-icon = ExtResource("2_4clwu")
-
-[node name="Sprite2D" type="Sprite2D" parent="b_s_esque"]
-position = Vector2(74, 163)
-scale = Vector2(0.3053, 0.3293173)
-texture = ExtResource("8_b85oo")
-
-[node name="b_s_nerv" type="Button" parent="."]
-layout_mode = 0
-offset_left = -59.0
-offset_top = 560.0
-offset_right = 91.0
-offset_bottom = 880.0
-icon = ExtResource("2_4clwu")
-
-[node name="Sprite2D" type="Sprite2D" parent="b_s_nerv"]
-position = Vector2(76, 154)
-scale = Vector2(0.414544, 0.436139)
-texture = ExtResource("8_fhq1v")
+offset_left = 170.0
+offset_top = 181.0
+offset_right = 260.0
+offset_bottom = 204.0
+scale = Vector2(2.1384475, 2.2462628)
+text = "Reprodutor"
 
 [node name="b_s_reprofem" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.024
 anchor_bottom = 0.006
-offset_left = 283.0
-offset_top = 208.0
-offset_right = 415.72
-offset_bottom = 520.32
+offset_left = 282.0
+offset_top = 229.0
+offset_right = 422.672
+offset_bottom = 551.48
 icon = ExtResource("2_4clwu")
 
 [node name="Sprite2D" type="Sprite2D" parent="b_s_reprofem"]
@@ -166,27 +86,192 @@ position = Vector2(76, 162.375)
 scale = Vector2(0.531365, 1.01682)
 texture = ExtResource("9_4clwu")
 
+[node name="Cadeado2" type="Sprite2D" parent="b_s_reprofem"]
+position = Vector2(75, 164)
+texture = ExtResource("12_b85oo")
+
+[node name="b_s_diges" type="Button" parent="."]
+layout_mode = 0
+offset_left = -214.0
+offset_top = 229.0
+offset_right = -56.0
+offset_bottom = 557.0
+icon = ExtResource("2_4clwu")
+icon_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="b_s_diges"]
+position = Vector2(79, 156)
+scale = Vector2(1, 1.20667)
+texture = ExtResource("2_362qe")
+
+[node name="Label" type="Label" parent="b_s_diges"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_top = -48.0
+offset_right = 80.0
+offset_bottom = -25.0
+scale = Vector2(1.9468237, 2.0283248)
+text = "Disgestivo"
+horizontal_alignment = 1
+
+[node name="b_s_musc" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.071
+anchor_bottom = 0.043
+offset_left = -46.0
+offset_top = 229.0
+offset_right = 60.738
+offset_bottom = 517.44
+icon = ExtResource("2_4clwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="b_s_musc"]
+position = Vector2(80, 185)
+scale = Vector2(1.00714, 0.966667)
+texture = ExtResource("2_m37ia")
+
+[node name="Label2" type="Label" parent="b_s_musc"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -48.0
+offset_right = 82.0
+offset_bottom = -25.0
+scale = Vector2(2.0403392, 2.0932906)
+text = "Muscular"
+horizontal_alignment = 1
+
+[node name="b_s_repro" type="Button" parent="."]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 229.0
+offset_right = 280.0
+offset_bottom = 557.0
+icon = ExtResource("2_4clwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="b_s_repro"]
+modulate = Color(0.6027341, 0.6027341, 0.6027341, 1)
+position = Vector2(72, 170)
+scale = Vector2(0.878049, 1.08261)
+texture = ExtResource("5_cxvhr")
+
+[node name="Cadeado" type="Sprite2D" parent="b_s_repro"]
+position = Vector2(78, 164)
+texture = ExtResource("12_b85oo")
+
+[node name="b_s_excre" type="Button" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 589.0
+offset_right = 440.0
+offset_bottom = 917.0
+icon = ExtResource("2_4clwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="b_s_excre"]
+position = Vector2(80, 165.00003)
+scale = Vector2(0.2619648, 0.40806043)
+texture = ExtResource("7_140pv")
+
+[node name="Label" type="Label" parent="b_s_excre"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_top = -40.0
+offset_right = 80.0
+offset_bottom = -17.0
+scale = Vector2(1.9468237, 2.0283248)
+text = "Excretor"
+horizontal_alignment = 1
+
+[node name="b_s_esque" type="Button" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 589.0
+offset_right = 276.0
+offset_bottom = 917.0
+icon = ExtResource("2_4clwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="b_s_esque"]
+position = Vector2(74, 163)
+scale = Vector2(0.3053, 0.3293173)
+texture = ExtResource("8_b85oo")
+
+[node name="Label" type="Label" parent="b_s_esque"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -3.9999986
+offset_top = -40.0
+offset_right = 85.0
+offset_bottom = -17.0
+scale = Vector2(1.9468237, 2.0283248)
+text = "Esquelético"
+horizontal_alignment = 1
+
+[node name="b_s_resp" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.017
+anchor_top = 0.022
+anchor_right = 0.029
+anchor_bottom = 0.041
+offset_left = -201.726
+offset_top = 568.76
+offset_right = -76.938
+offset_bottom = 879.28
+icon = ExtResource("2_4clwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="b_s_resp"]
+position = Vector2(74, 157.625)
+scale = Vector2(0.413793, 0.544145)
+texture = ExtResource("4_x5xcb")
+
+[node name="Label" type="Label" parent="b_s_resp"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -7.999998
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = -17.0
+scale = Vector2(1.7937466, 2.0283248)
+text = "Respiratório"
+horizontal_alignment = 1
+
+[node name="b_s_nerv" type="Button" parent="."]
+layout_mode = 0
+offset_left = -46.0
+offset_top = 589.0
+offset_right = 112.0
+offset_bottom = 917.0
+icon = ExtResource("2_4clwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="b_s_nerv"]
+position = Vector2(76, 154)
+scale = Vector2(0.414544, 0.436139)
+texture = ExtResource("8_fhq1v")
+
+[node name="Label" type="Label" parent="b_s_nerv"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -7.999998
+offset_top = -40.0
+offset_right = 88.0
+offset_bottom = -17.0
+scale = Vector2(1.7937466, 2.0283248)
+text = "Nervoso"
+horizontal_alignment = 1
+
 [node name="TextureRect" type="TextureRect" parent="."]
 light_mask = 2
 visibility_layer = 2
 z_index = -2
 z_as_relative = false
 layout_mode = 0
-offset_left = -460.0
-offset_top = 68.0
-offset_right = 545.0
-offset_bottom = 1485.0
+offset_left = -430.0
+offset_top = 85.0
+offset_right = 575.0
+offset_bottom = 1502.0
 mouse_filter = 2
 texture = ExtResource("15_28y4r")
 expand_mode = 4
-
-[node name="Cadeado" type="Sprite2D" parent="."]
-position = Vector2(194, 372)
-texture = ExtResource("12_b85oo")
-
-[node name="Cadeado2" type="Sprite2D" parent="."]
-position = Vector2(358, 372)
-texture = ExtResource("12_b85oo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.9474059, 4.0670484e-06, 3.85046e-07, 1)
@@ -202,11 +287,11 @@ offset_right = -163.0
 offset_bottom = 1011.0
 text = "Voltar"
 
+[connection signal="pressed" from="dific" to="." method="_on_dific_pressed"]
 [connection signal="pressed" from="b_s_diges" to="." method="_on_b_s_diges_pressed"]
 [connection signal="pressed" from="b_s_musc" to="." method="_on_b_s_musc_pressed"]
-[connection signal="pressed" from="b_s_resp" to="." method="_on_b_s_resp_pressed"]
-[connection signal="pressed" from="dific" to="." method="_on_dific_pressed"]
 [connection signal="pressed" from="b_s_excre" to="." method="_on_b_s_excre_pressed"]
 [connection signal="pressed" from="b_s_esque" to="." method="_on_b_s_esque_pressed"]
+[connection signal="pressed" from="b_s_resp" to="." method="_on_b_s_resp_pressed"]
 [connection signal="pressed" from="b_s_nerv" to="." method="_on_b_s_nerv_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

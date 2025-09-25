@@ -58,6 +58,7 @@ func flip_card():
 
 
 func flip_back():
+	await get_tree().create_timer(0.5).timeout
 	if not is_matched:
 		is_flipped = false
 		anim.play("virar")
@@ -68,9 +69,10 @@ func flip_back():
 		label.hide()
 		spr2.hide()
 func match():
-	is_matched = true
 	anim.play("desvirar")
 	await get_tree().create_timer(0.5).timeout
+	is_matched = true
+
 	Global.p_click=true
 	queue_free()
 func _on_pressed():

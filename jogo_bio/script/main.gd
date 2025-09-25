@@ -200,6 +200,7 @@ func start_new_game():
 
 func _on_card_flipped(card):
 	if is_processing_move:
+
 		return
 	flipped_cards.append(card)
 
@@ -207,16 +208,17 @@ func _on_card_flipped(card):
 		Global.p_click=false
 		is_processing_move = true
 
-		await get_tree().create_timer(2).timeout
 		_check_match()
 
 
 func _check_match():
-	Global.p_click=false
+
+
 	var card1 = flipped_cards[0]
 	var card2 = flipped_cards[1]
-
+	Global.p_click=false
 	if card1.pair_id == card2.pair_id:
+
 		card1.match()
 		card2.match()
 
@@ -227,16 +229,19 @@ func _check_match():
 			Global.reset_tudo()
 			get_tree().change_scene_to_file("res://cenas/escolha_s.tscn")
 	else:
+
+
 		card1.flip_back()
 		card2.flip_back()
+
 		Global.p_click=true
 
 	flipped_cards.clear()
+	
 	is_processing_move = false
 	grid_container.mouse_filter = Control.MOUSE_FILTER_PASS
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://cenas/escolha_s.tscn")
-	Global.reset_tudo()
+		get_tree().change_scene_to_file("res://cenas/menu.tscn")
 	
