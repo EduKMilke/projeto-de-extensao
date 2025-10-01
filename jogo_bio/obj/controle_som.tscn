@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://biufmvpt636v4"]
 
 [ext_resource type="Script" uid="uid://dcbs60a8x44ka" path="res://script/control_s.gd" id="1_1jd1t"]
-[ext_resource type="AudioStream" uid="uid://bjnss5eqkp1h5" path="res://assets/músicas/bio.ogg" id="2_1jd1t"]
+[ext_resource type="AudioStream" uid="uid://bj483khciidf1" path="res://assets/músicas/bioofficial.ogg" id="2_1jd1t"]
 
 [node name="cont_som" type="Node2D"]
 script = ExtResource("1_1jd1t")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_1jd1t")
-volume_db = -7.307
+volume_db = -8.379
+autoplay = true
