@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bbotj66nw8i5d"]
+[gd_scene load_steps=19 format=3 uid="uid://bbotj66nw8i5d"]
 
 [ext_resource type="Script" uid="uid://dphruiuubd51p" path="res://script/sescolha_s.gd" id="1_sschf"]
 [ext_resource type="Texture2D" uid="uid://b7ci3pfmki8kg" path="res://assets/bege_cinza_do_eduardo.png" id="2_4clwu"]
@@ -12,11 +12,74 @@
 [ext_resource type="Texture2D" uid="uid://d053yxbm5dvlj" path="res://assets/reprodutor/s_reprodutorm.png" id="9_4clwu"]
 [ext_resource type="Texture2D" uid="uid://c34hm6y3b8hmy" path="res://assets/cadeado.png" id="12_b85oo"]
 [ext_resource type="Texture2D" uid="uid://bs1cvqc4c3t3e" path="res://assets/amarelo_dif.png" id="13_fhq1v"]
+[ext_resource type="Texture2D" uid="uid://7cbsp4v2mqol" path="res://Título (1).png" id="14_4clwu"]
 [ext_resource type="Texture2D" uid="uid://1o2dhweh1vw2" path="res://assets/bege.png" id="15_28y4r"]
 
 [sub_resource type="GDScript" id="GDScript_140pv"]
 script/source = "extends Button
 "
+
+[sub_resource type="Animation" id="Animation_4clwu"]
+resource_name = "new_animation"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(114, 141)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:skew")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.26529005, 0.35430184, -0.26529005]
+}
+
+[sub_resource type="Animation" id="Animation_28y4r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(114, 141)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:skew")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.26529005]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wknbr"]
+_data = {
+&"RESET": SubResource("Animation_28y4r"),
+&"new_animation": SubResource("Animation_4clwu")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -31,21 +94,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sschf")
 
-[node name="Label" type="Label" parent="."]
-modulate = Color(0, 0.75, 0, 1)
-layout_mode = 0
-offset_left = -70.0
-offset_top = 101.0
-offset_right = -1.0
-offset_bottom = 124.0
-scale = Vector2(5.3164864, 3.3216655)
-text = "Sistemas"
-
 [node name="dific" type="Button" parent="."]
 layout_mode = 0
-offset_left = -158.0
+offset_left = -201.0
 offset_top = 933.0
-offset_right = 470.0
+offset_right = 470.35187
 offset_bottom = 1006.0
 scale = Vector2(0.9577689, 1.040032)
 script = SubResource("GDScript_140pv")
@@ -265,27 +318,40 @@ visibility_layer = 2
 z_index = -2
 z_as_relative = false
 layout_mode = 0
-offset_left = -430.0
-offset_top = 85.0
-offset_right = 575.0
-offset_bottom = 1502.0
+offset_left = -270.0
+offset_top = 93.0
+offset_right = 482.0
+offset_bottom = 1098.0
 mouse_filter = 2
 texture = ExtResource("15_28y4r")
 expand_mode = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.9474059, 4.0670484e-06, 3.85046e-07, 1)
-position = Vector2(-209, 973.00006)
-scale = Vector2(0.14596774, 1.176923)
+position = Vector2(-232.4375, 971.06256)
+scale = Vector2(0.085685484, 1.1711535)
 texture = ExtResource("13_fhq1v")
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = -256.0
-offset_top = 933.0
-offset_right = -163.0
-offset_bottom = 1011.0
+offset_left = -260.0
+offset_top = 934.0
+offset_right = -205.0
+offset_bottom = 1010.0
 text = "Voltar"
+
+[node name="Título(1)" type="Sprite2D" parent="."]
+position = Vector2(114, 141)
+scale = Vector2(0.90333337, 0.84000003)
+skew = -0.26529005
+texture = ExtResource("14_4clwu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Título(1)"]
+deterministic = true
+libraries = {
+&"": SubResource("AnimationLibrary_wknbr")
+}
+movie_quit_on_finish = true
 
 [connection signal="pressed" from="dific" to="." method="_on_dific_pressed"]
 [connection signal="pressed" from="b_s_diges" to="." method="_on_b_s_diges_pressed"]
