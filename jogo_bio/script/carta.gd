@@ -19,6 +19,7 @@ var back_texture: Texture2D = preload("res://assets/Carta Memória.png")
 @onready var anim=$AnimationPlayer
 @onready var spr=$Sprite2D
 @onready var spr2=$Sprite2D2
+
 func initialize(id, content, is_text_card):
 	pair_id = id
 	is_flipped = false
@@ -37,12 +38,12 @@ func initialize(id, content, is_text_card):
 
 
 func flip_card():
+
 	if not is_flipped and not is_matched:
-		is_flipped = true
+
 		anim.play("virar")
 
-		await get_tree().create_timer(0.5).timeout
-
+		is_flipped = true
 
 		if text_content != "":
 			texture_rect.hide()
@@ -58,23 +59,26 @@ func flip_card():
 
 
 func flip_back():
-	await get_tree().create_timer(0.5).timeout
+
 	if not is_matched:
 		is_flipped = false
 		anim.play("virar")
-
 		await get_tree().create_timer(0.5).timeout
 		texture_rect.show()
 		texture_rect.texture = back_texture
 		label.hide()
 		spr2.hide()
 func match():
+
+
+	await get_tree().create_timer(1).timeout
 	anim.play("desvirar")
 	await get_tree().create_timer(0.5).timeout
 	is_matched = true
-
 	Global.p_click=true
 	queue_free()
 func _on_pressed():
+
 	if not is_flipped and not is_matched and Global.p_click==true:
+
 		flip_card()

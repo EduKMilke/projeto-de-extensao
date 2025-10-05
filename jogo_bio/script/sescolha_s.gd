@@ -11,6 +11,7 @@ func _ready() -> void:
 	label_dif.text=n_dific[Global.dific] 
 	b_dif.modulate=c_dific[Global.dific] 
 	subt.play("new_animation")
+	Global.p_click=true
 func _on_dific_pressed() -> void: #mudar a dificuladade
 		Global.dific+=1
 		if Global.dific>2:

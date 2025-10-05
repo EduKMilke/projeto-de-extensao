@@ -200,14 +200,13 @@ func start_new_game():
 
 func _on_card_flipped(card):
 	if is_processing_move:
-
 		return
 	flipped_cards.append(card)
 
 	if flipped_cards.size() == 2:
 		Global.p_click=false
-		is_processing_move = true
 
+		is_processing_move = true
 		_check_match()
 
 
@@ -217,6 +216,7 @@ func _check_match():
 	var card1 = flipped_cards[0]
 	var card2 = flipped_cards[1]
 	Global.p_click=false
+	await get_tree().create_timer(1).timeout
 	if card1.pair_id == card2.pair_id:
 
 		card1.match()
@@ -224,13 +224,13 @@ func _check_match():
 
 
 		if grid_container.get_child_count() <= 2:
-			print("Parabéns, você venceu!")
 			await get_tree().create_timer(1).timeout
+			print("Parabéns, você venceu!")
 			Global.reset_tudo()
 			get_tree().change_scene_to_file("res://cenas/escolha_s.tscn")
 	else:
 
-
+		await get_tree().create_timer(1).timeout
 		card1.flip_back()
 		card2.flip_back()
 
