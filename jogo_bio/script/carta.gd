@@ -13,7 +13,7 @@ var text_content = ""
 
 
 var back_texture: Texture2D = preload("res://assets/Carta Memória.png")
-
+var feito=false
 @onready var texture_rect = $TextureRect
 @onready var label = $Label
 @onready var anim=$AnimationPlayer
@@ -69,14 +69,16 @@ func flip_back():
 		label.hide()
 		spr2.hide()
 func match():
-
-
 	await get_tree().create_timer(1).timeout
 	anim.play("desvirar")
 	await get_tree().create_timer(0.5).timeout
 	is_matched = true
-	Global.p_click=true
-	queue_free()
+	Global.p_click = true
+	feito = true 
+	texture_rect.hide()
+	label.hide()
+	spr.hide()
+	spr2.hide()
 func _on_pressed():
 
 	if not is_flipped and not is_matched and Global.p_click==true:
