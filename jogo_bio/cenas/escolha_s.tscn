@@ -164,7 +164,7 @@ offset_top = -48.0
 offset_right = 80.0
 offset_bottom = -25.0
 scale = Vector2(1.9468237, 2.0283248)
-text = "Disgestivo"
+text = "Digestivo"
 horizontal_alignment = 1
 
 [node name="b_s_musc" type="Button" parent="."]

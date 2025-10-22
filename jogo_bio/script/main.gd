@@ -3,15 +3,19 @@ extends Control
 @onready var grid_container = $CenterContainer/GridContainer
 var card_scene = preload("res://obj/cartas.tscn")
 
-
+@onready var tim=$Label
+@onready var vir=$Label2
 var flipped_cards := []
 var is_processing_move := false
 var pairs_data = []
 var total_cartas = 0
 var total_cartas2=0
+var tempo:int
+var tempo2:String
+var viradas:int=0
 func _ready():
 	randomize()
-
+	tempo=60
 
 	if Global.s_dige == true:
 		var delgado=["Reponsável pela\nabsorção de\nnutrientes","Mede até\nsete metros\nde comprimento"].pick_random()
@@ -169,6 +173,7 @@ func _ready():
 			[troncoence, preload("res://assets/nervoso/s_troncoence.png")],
 		]
 	start_new_game()
+	_update_timer()
 	for child in grid_container.get_children():
 		if child is Button:
 			total_cartas += 1
@@ -212,12 +217,23 @@ func _on_card_flipped(card):
 		is_processing_move = true
 		_check_match()
 
-
+func _update_timer()->void:
+	tempo2=str(tempo)+"s"
+	tim.text="Tempo: "+ tempo2
+	tempo-=1
+	if tempo<0:
+		Global.reset_tudo()
+		get_tree().change_scene_to_file("res://cenas/escolha_s.tscn")
+	else:
+		await get_tree().create_timer(1).timeout
+		_update_timer()
 
 func _check_match():
 	var card1 = flipped_cards[0]
 	var card2 = flipped_cards[1]
 	Global.p_click = false
+	viradas+=1
+	vir.text="Viradas:"+str(viradas)
 	await get_tree().create_timer(1).timeout
 	if card1.pair_id == card2.pair_id:
 		card1.match()
@@ -241,8 +257,6 @@ func verifica()-> void:
 			print("ok")
 			Global.reset_tudo()
 			get_tree().change_scene_to_file("res://cenas/escolha_s.tscn")
-
-
-func _on_button_pressed() -> void:
-		get_tree().change_scene_to_file("res://cenas/menu.tscn")
-	
+func _on_button_2_pressed() -> void:
+		Global.reset_tudo()
+		get_tree().change_scene_to_file("res://cenas/escolha_s.tscn")

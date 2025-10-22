@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cv4ltumqeyf6l"]
+[gd_scene load_steps=4 format=3 uid="uid://cv4ltumqeyf6l"]
 
 [ext_resource type="Script" uid="uid://8nb4wjb75sac" path="res://script/main.gd" id="1_k46e6"]
 [ext_resource type="Texture2D" uid="uid://1o2dhweh1vw2" path="res://assets/bege.png" id="2_32vai"]
+[ext_resource type="Texture2D" uid="uid://bs1cvqc4c3t3e" path="res://assets/amarelo_dif.png" id="3_1frua"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -45,3 +46,34 @@ offset_bottom = 1281.0
 mouse_filter = 2
 texture = ExtResource("2_32vai")
 expand_mode = 4
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.06, 0.06, 0.06, 1)
+layout_mode = 0
+offset_right = 109.0
+offset_bottom = 23.0
+text = "Tempo: 60s"
+
+[node name="Label2" type="Label" parent="."]
+modulate = Color(0.06, 0.06, 0.06, 1)
+layout_mode = 0
+offset_top = 23.0
+offset_right = 109.0
+offset_bottom = 46.0
+text = "Viradas: 0"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.9474059, 4.0670484e-06, 3.85046e-07, 1)
+position = Vector2(29, 879.9999)
+scale = Vector2(0.085685484, 1.1711535)
+texture = ExtResource("3_1frua")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 842.0
+offset_right = 56.0
+offset_bottom = 918.0
+text = "Voltar"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
