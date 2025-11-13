@@ -1,0 +1,1 @@
+draw_text(30,75,"Se mova no W A S D,\nENTER para usar seu poder de sombra,\nlembre que tem quantidade de energia, \nR reinicia a fase,\nK volta para o menu")
